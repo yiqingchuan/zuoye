@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>101罗玲林</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(197, 235, 235);;
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+        nav{
+            background-color: aqua;
+            width: 100px; /* 设置导航栏宽度 */
+            height: 100vh; /* 设置导航栏高度 */
+            position: fixed; /* 固定在页面左侧 */
+            top: 0;
+            left: 0;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{
+            position: relative;
+            margin: 0;
+            width: 100%;
+        }
+        nav ul li a{
+            display: block;
+            padding: 15px 25px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        nav ul li a:hover, nav ul li:hover > a{
+            background-color: aqua;/* 修改hover颜色 */
+        }
+        nav ul li ul{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: aqua;
+            border-radius: 5px;
+            width: 120px; /* 设置子菜单宽度 */
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        nav ul li ul li{
+            display: block;
+            width: 100%;
+        }
+        nav ul li ul li a{
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        nav ul li ul li a:hover{
+            background-color:aquas; /* 修改hover颜色 */
+        }
+        /* 滑动门效果 */
+        .slide-door {
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-door a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 255, 255, 0.5); /* 滑动门颜色 */
+            z-index: 0;
+            transition: left 0.3s;
+        }
+        .slide-door a:hover::before {
+            left: -100%;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+        <ul class="diyicaidan">
+            <li><a href="https://www.bilibili.com/v/music/?spm_id_from=333.1073.0.0" class="slide-door">音乐</a></li>
+            <li class="diercaidan">
+                <a href="https://www.bilibili.com/v/ent/?spm_id_from=333.1073.0.0" class="slide-door">娱乐</a>
+                <ul>
+                    <li><a href="https://www.bilibili.com/v/ent/talker/?spm_id_from=333.1007.0.0" class="slide-door">娱乐杂谈</a></li>
+                    <li><a href="https://www.bilibili.com/v/ent/entertainment_news/?spm_id_from=333.1073.0.0" class="slide-door">娱乐咨询</a></li>
+                    <li><a href="https://www.bilibili.com/v/ent/celebrity" class="slide-door">明星综合</a></li>
+                    <li><a href="https://www.bilibili.com/v/ent/cp_recommendation" class="slide-door">CP安利</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.bilibili.com/v/knowledge/?spm_id_from=333.1073.0.0" class="slide-door">知识</a></li>
+            <li><a href="https://www.bilibili.com/v/food/?spm_id_from=333.1073.0.0" class="slide-door">美食</a></li>
+        </ul>
+   </nav>
+</body>
+</html>
